@@ -6,7 +6,7 @@
 Number of wavelengths of observation                 NCOL     :  5
 *
 *
-Format for input light data                          FMT      : (2E20.7,F5.0)
+Format for input light data                          FMT      : (2E20.7,F5.2)
 * NOTE: get following data from PGBX1.DAT
 * Phases are in orbital period units, not radians
 Orbital phase, primary minimum, first contact       Pphase1   : -.0630919
