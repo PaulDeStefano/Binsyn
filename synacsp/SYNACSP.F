@@ -189,6 +189,7 @@ C      CALL system("cp SCRATCH.INF SYNACSP.INF", RESULT)
 C     Run program DATCONV.
       CALL ChDir("../datconv/")
       CALL system("./datconvscr" , RESULT)
+      IF(0.NE.RESULT) CALL EXIT(-1)
       CALL ChDir(CWD)
 	OPEN (UNIT = IN1, FILE = FL1(1), STATUS = 'OLD')
 	READ (IN1,110) KEYERR
@@ -200,11 +201,12 @@ C     Store output.
 C      copy ../oa/SYSSM.DAT to ../binsyn/synspadd/SMAD0830.001 or subsequent
       CALL system(NAME1,
      $ RESULT)
-       WRITE (*,106) JLOOP
+C      WRITE (*,106) JLOOP
       NSTART=NSTART+1
       IORD=IORD+1
     	END DO		   !DO JLOOP=1,NPSI
    10 CONTINUE
+       WRITE (*,106) JLOOP
       CALL SYSTEM_CLOCK(CLOCK2,COUNT_RATE,COUNT_MAX)
       AAA=CLOCK1
       BBB=CLOCK2
