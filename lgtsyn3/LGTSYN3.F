@@ -525,6 +525,7 @@ C     Run PEDCS. Produce light derivatives at the orbital
 C     phases of observation
       CALL ChDir("../pedcs/")
       CALL system("./pedcsscr" , RESULT)
+      IF(0.NE.RESULT) STOP 'ERROR: PEDCS failed'
       CALL ChDir(CWD)
       call tsout(RESULT, icount, NOUT)
 C      OPEN (UNIT = IN1, FILE = FL1(1), STATUS = 'OLD')
