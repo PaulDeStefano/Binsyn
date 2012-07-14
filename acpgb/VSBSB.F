@@ -1835,7 +1835,7 @@ C     projected center of the gainer at this point.
 	END IF
 	IF (DABS(RDRY(2)-RDRY(3)).LT.1.D-12) THEN
 		RDRY(3)=RD(J+4-KK)
-		AGRY(4)=AGLD(J+4-KK)
+		AGRY(3)=AGLD(J+4-KK)
 	END IF
 	IF ((AGRY(1).LT.AGRY(2)).AND.(AGRY(2).LT.AGRY(3))) GO TO 740
 	IF ((AGRY(2).LT.AGRY(1)).AND.(AGRY(3).LT.AGRY(1))) THEN
