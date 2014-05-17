@@ -8,6 +8,7 @@ cp ../oa/PGCX2.DAT ./
 cp ../oa/PGBX2.DAT ./
 cp ../oa/VVTST3.MGS ./VVTST3.MGS
 cp ../oa/PGDX3.DAT ./
+[ -f ../oa/ACPGD2.DAT ] && cp ../oa/ACPGD2.DAT ./  # in case SPT.ILS calls for it
 cp ../ia/RFMG.DAT ./
 cp ../ia/THLT.DAT ./
 cp ../ia/PHAS.DAT ./
